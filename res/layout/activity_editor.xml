@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+    <TextView
+        android:id="@+id/date"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="5dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="5dp"
+         />
+
+    <EditText
+        android:id="@+id/editText1"
+        android:layout_width="match_parent"
+        android:layout_height="390dp"
+        android:layout_below="@+id/date"
+        android:ems="10"
+        android:gravity="top"
+        android:inputType="textMultiLine"
+        android:singleLine="false"
+        android:textDirection="rtl" >
+
+        <requestFocus />
+    </EditText>
+
+    <Button
+        android:id="@+id/previous"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/editText1"
+        android:layout_marginBottom="5dp"
+        android:layout_marginLeft="18dp"
+        android:background="@drawable/button_prev"
+        android:onClick="previouseNote" 
+        android:visibility="gone"/>
+
+    <Button
+        android:id="@+id/next"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignTop="@+id/previous"
+        android:layout_marginBottom="5dp"
+        android:layout_marginRight="18dp"
+        android:background="@drawable/button_next"
+        android:onClick="nextNote" 
+        android:visibility="gone"/>
+
+    <Button
+        android:id="@+id/trash"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignTop="@+id/previous"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="5dp"
+        android:layout_marginTop="5dp"
+        android:background="@drawable/button_trash"
+        android:onClick="trashNote" 
+        android:visibility="gone"/>
+
+</RelativeLayout>
